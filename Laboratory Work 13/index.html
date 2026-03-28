@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js" defer></script>
+</head>
+<body>
+    <div class="group-selector">
+        <select class="group-selector__field" id="group" name="group" aria-label="group" data-js-group-select>
+            <option value="W-2511">W-2511</option>
+            <option value="W-2512">W-2512</option>
+            <option value="W-2331">W-2331</option>
+        </select>
+    </div>
+
+    <div class="student-asked">
+        <div class="student-asked-header">
+            <span class="student-asked__title">Asked:</span>
+            <span class="student-asked__name" data-js-asked-first-name>First Name</span>
+            <span class="student-asked__name" data-js-asked-last-name>Last Name</span>
+        </div>
+        <div class="student-asked__grade">
+            <label for="grade">Grade</label>
+            <input type="number" id="grade" class="student-asked__input" maxlength="2" aria-label="Grade" data-js-input-grade-top>
+            <button class="button button-primary" data-js-btn-set-grade>Set</button>
+        </div>
+    </div>
+
+    <div class="students-panel">
+        <header class="students-panel__header">
+            <h2 class="students-panel__title">Students List</h2>
+            <div class="students-panel__actions">
+                <button class="button button-primary" data-js-btn-random-student>Random Student</button>
+                <button class="button" data-js-btn-reset-student-list>Reset List</button>
+            </div>
+        </header>
+
+        <div class="students-list" data-js-students-list>
+            <div class="students-list__row students-list__row--header">
+                <span class="students-list__cell">Nr.</span>
+                <span class="students-list__cell">First Name</span>
+                <span class="students-list__cell">Last Name</span>
+                <span class="students-list__cell center">Absence</span>
+                <span class="students-list__cell center">Grade</span>
+                <span class="students-list__cell center">Asked</span>
+            </div>
+
+            <div class="students-list__row" id="">
+                <span class="students-list__cell">Nr.</span>
+                <span class="students-list__cell">First Name</span>
+                <span class="students-list__cell">Last Name</span>
+                <div class="students-list__cell center">
+                    <input type="checkbox" class="students-list__checkbox" aria-label="Absence">
+                </div>
+                <div class="students-list__cell center">
+                    <input type="text" class="students-list__input" min="1" max="10" maxlength="2" placeholder="-" aria-label="Grade">
+                </div>
+                <div class="students-list__cell center">
+                    <span class="students-list__status asked"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
