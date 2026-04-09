@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tourist Destination</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js" defer></script>
+</head>
+<body>
+    <form class="destination-entry-form" data-js-user-data-form>
+        <h2 class="destination-entry-form__header">Tourist Destination</h2>
+
+        <div class="destination-entry-form__field">
+            <label for="city_name">City or Landmark</label>
+            <input type="text" id="city_name" name="city" required>
+        </div>
+
+        <div class="destination-entry-form__field">
+            <label for="country-name">Country</label>
+            <input type="text" id="country-name" name="country" required>
+        </div>
+
+        <div class="destination-entry-form__field">
+            <label for="description-summary">Destination Details</label>
+            <input type="text" id="description-summary" name="description" required>
+        </div>
+
+        <div class="destination-entry-form__field">
+            <label for="estimated-price">Estimated-price</label>
+            <input type="text" id="estimated-price" name="price" required>
+        </div>
+
+        <div class="destination-entry-form__field">
+            <label for="preview-image-url">Image Preview URL</label>
+            <input type="text" id="preview-image-url" name="src" required>
+        </div>
+
+        <button type="submit" class="btn-primary" data-js-btn-submit>Send</button>
+    </form>
+
+    <section class="cards-section">
+        <header class="cards-section__header">
+            <div class="cards-section__sort">
+                <select class="cards-section__dropdown" name="sort-order" aria-label="Sort by Price" data-js-select-sort-price>
+                    <option value="all" selected>All Destinations</option>
+                    <option value="name-asc">Name: A to Z</option>
+                    <option value="name-desc">Name: Z to A</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                </select>
+
+                <select class="cards-section__dropdown" name="sort-country" aria-label="Sort by Country" data-js-select-sort-country></select>
+            </div>
+
+            <button data-js-btn-edit-mode>
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 5H3C2.46957 5 1.96086 5.21071 1.58579 5.58579C1.21071 5.96086 1 6.46957 1 7V16C1 16.5304 1.21071 17.0391 1.58579 17.4142C1.96086 17.7893 2.46957 18 3 18H12C12.5304 18 13.0391 17.7893 13.4142 17.4142C13.7893 17.0391 14 16.5304 14 16V15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13 3.00011L16 6.00011M17.385 4.58511C17.7788 4.19126 18.0001 3.65709 18.0001 3.10011C18.0001 2.54312 17.7788 2.00895 17.385 1.61511C16.9912 1.22126 16.457 1 15.9 1C15.343 1 14.8088 1.22126 14.415 1.61511L6 10.0001V13.0001H9L17.385 4.58511Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </header>
+
+        <div class="cards-section__body" data-js-cards-section>
+            <div class="cards-section__card">
+                <div class="cards-section__delete">
+                    <button class="cards-section__delete__button" data-js-delete-mode>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="black"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="cards-section__img">
+                    <img src="https://picsum.photos/id/1016/600/400" alt="Snowy mountain peaks">
+                </div>
+                <div class="cards-section__content">
+                    <div class="cards-section__info">
+                        <h3 class="cards-section__title">Zermatt Alpine Resort</h3>
+                        <p class="cards-section__description">
+                            Experience world-class skiing and breathtaking views of the Matterhorn in this iconic Swiss mountain village. Perfect for winter sports enthusiasts.
+                        </p>
+                    </div>
+                    <div class="cards-section__meta">
+                        <h4 class="cards-section__country">Switzerland</h4>
+                        <h4 class="cards-section__price">$250 / night</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-section__card">
+                <div class="cards-section__img">
+                    <img src="https://picsum.photos/id/1011/600/400" alt="Tropical beach with blue water">
+                </div>
+                <div class="cards-section__content">
+                    <div class="cards-section__info">
+                        <h3 class="cards-section__title">Bora Bora Escape</h3>
+                        <p class="cards-section__description">
+                            Relax in luxury overwater bungalows surrounded by crystal clear turquoise lagoons and vibrant coral reefs. A true tropical heaven on earth.
+                        </p>
+                    </div>
+                    <div class="cards-section__meta">
+                        <h4 class="cards-section__country">French Polynesia</h4>
+                        <h4 class="cards-section__price">$450 / night</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-section__card">
+                <div class="cards-section__img">
+                    <img src="https://picsum.photos/id/1033/600/400" alt="City skyline at night">
+                </div>
+                <div class="cards-section__content">
+                    <div class="cards-section__info">
+                        <h3 class="cards-section__title">Tokyo Nightlife</h3>
+                        <p class="cards-section__description">
+                            Discover the neon-lit streets of Shinjuku. From Michelin-starred dining to hidden izakayas, experience the energy of the world's largest city.
+                        </p>
+                    </div>
+                    <div class="cards-section__meta">
+                        <h4 class="cards-section__country">Japan</h4>
+                        <h4 class="cards-section__price">$180 / night</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-section__card">
+                <div class="cards-section__img">
+                    <img src="https://picsum.photos/id/1040/600/400" alt="Ancient ruins in the desert">
+                </div>
+                <div class="cards-section__content">
+                    <div class="cards-section__info">
+                        <h3 class="cards-section__title">Petra Lost City</h3>
+                        <p class="cards-section__description">
+                            Walk through the narrow Siq to witness the magnificent Treasury carved directly into the red sandstone cliffs by the Nabateans centuries ago.
+                        </p>
+                    </div>
+                    <div class="cards-section__meta">
+                        <h4 class="cards-section__country">Jordan</h4>
+                        <h4 class="cards-section__price">$120 / night</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
